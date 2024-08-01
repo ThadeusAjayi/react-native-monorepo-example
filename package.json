@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "resolutions": {
+    "@types/react": "^18.2.44"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
