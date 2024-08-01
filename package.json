@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently -k -n 'App,Package' -c 'magenta,blue' \"pnpm --prefix ./apps/ExampleApp run android\" \"pnpm watch:package\"",
+    "watch:package": "watch \"pnpm --prefix ./packages/component-module prepare\" ./packages/component-module/src",
+    "install:ios": "pnpm --prefix ./apps/ExampleApp run install:ios:deps",
+    "install:all": "pnpm i && pnpm install:ios"
   },
   "resolutions": {
     "@types/react": "^18.2.44"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "watch": "^1.0.2"
+  }
 }
