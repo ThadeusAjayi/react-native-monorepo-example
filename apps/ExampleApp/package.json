@@ -29,7 +29,9 @@
     "prettier": "2.8.8",
     "react-test-renderer": "18.2.0",
     "typescript": "5.0.4",
-    "@react-native-community/cli-platform-android": "13.6.9"
+    "@react-native-community/cli-platform-android": "13.6.9",
+    "@react-native/gradle-plugin" : "0.74.85"
+    
   },
   "engines": {
     "node": ">=18"

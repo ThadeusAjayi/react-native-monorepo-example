@@ -38,6 +38,9 @@ importers:
       '@react-native/eslint-config':
         specifier: 0.74.85
         version: 0.74.85(eslint@8.57.0)(jest@29.7.0)(prettier@2.8.8)(typescript@5.0.4)
+      '@react-native/gradle-plugin':
+        specifier: 0.74.85
+        version: 0.74.85
       '@react-native/metro-config':
         specifier: 0.74.85
         version: 0.74.85(@babel/core@7.24.9)(@babel/preset-env@7.24.8)
@@ -125,10 +128,6 @@ importers:
       typescript:
         specifier: ^5.2.2
         version: 5.5.3
-
-  packages/component-module/lib/commonjs: {}
-
-  packages/component-module/lib/module: {}
 
 packages:
 
