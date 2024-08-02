@@ -5,7 +5,7 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -16,7 +16,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import {multiply, subtract, divide, add, purvide} from 'react-native-component-module';
+import {multiply, subtract, divide, add} from 'react-native-component-module';
 
 import {
   Colors,
@@ -32,11 +32,13 @@ type SectionProps = PropsWithChildren<{
 
 function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
-  multiply(2, 3);
-  divide(1, 2);
-  subtract(1, 4);
-  add(1, 2);
-  purvide(1,2)
+  useEffect(() => {
+    multiply(2, 3).then(console.log).catch(console.log);
+    divide(1, 2).then(console.log).catch(console.log);
+    subtract(1, 4).then(console.log).catch(console.log);
+    add(1, 2).then(console.log).catch(console.log);
+  }, []);
+
   return (
     <View style={styles.sectionContainer}>
       <Text
