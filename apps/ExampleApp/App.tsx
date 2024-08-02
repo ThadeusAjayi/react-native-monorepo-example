@@ -16,6 +16,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import {multiply, subtract, divide, add, purvide} from 'react-native-component-module';
 
 import {
   Colors,
@@ -31,6 +32,11 @@ type SectionProps = PropsWithChildren<{
 
 function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+  multiply(2, 3);
+  divide(1, 2);
+  subtract(1, 4);
+  add(1, 2);
+  purvide(1,2)
   return (
     <View style={styles.sectionContainer}>
       <Text

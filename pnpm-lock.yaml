@@ -23,6 +23,9 @@ importers:
       react-native:
         specifier: 0.74.3
         version: 0.74.3(@babel/core@7.24.9)(@babel/preset-env@7.24.8)(@types/react@18.3.3)(react@18.2.0)
+      react-native-component-module:
+        specifier: workspace:*
+        version: link:../../packages/component-module
     devDependencies:
       '@babel/core':
         specifier: ^7.20.0
