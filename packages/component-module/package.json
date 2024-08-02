@@ -1,6 +1,6 @@
 {
   "name": "react-native-component-module",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "A module for components",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",

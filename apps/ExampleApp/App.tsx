@@ -32,12 +32,6 @@ type SectionProps = PropsWithChildren<{
 
 function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
-  useEffect(() => {
-    multiply(2, 3).then(console.log).catch(console.log);
-    divide(1, 2).then(console.log).catch(console.log);
-    subtract(1, 4).then(console.log).catch(console.log);
-    add(1, 2).then(console.log).catch(console.log);
-  }, []);
 
   return (
     <View style={styles.sectionContainer}>
@@ -65,6 +59,20 @@ function Section({children, title}: SectionProps): React.JSX.Element {
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+  useEffect(() => {
+    multiply(2, 3)
+      .then(res => console.log('-----multiply', res))
+      .catch(console.log);
+    divide(1, 2)
+      .then(res => console.log('-----divide', res))
+      .catch(console.log);
+    subtract(1, 4)
+      .then(res => console.log('-----substract', res))
+      .catch(console.log);
+    add(1, 4)
+      .then(res => console.log('-----add', res))
+      .catch(console.log);
+  }, []);
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,

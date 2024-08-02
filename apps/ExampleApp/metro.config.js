@@ -10,6 +10,9 @@ const path = require('path');
 const rootDirectory = path.resolve(__dirname, '../..');
 
 const config = {
+  resolver: {
+    unstable_enablePackageExports: true,
+  },
   watchFolders: [
     rootDirectory,
     path.resolve(rootDirectory, 'node_modules'),
